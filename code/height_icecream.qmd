@@ -1,0 +1,27 @@
+---
+title: "height_icecream"
+format: html
+editor: source
+---
+
+Using library "here"
+
+height_icecream.csv is in a folder called "data".
+My markdown document is in a folder called "code".
+
+```{r}
+library(here)
+
+here("data", "height_icecream.csv")
+```
+
+```{r}
+height_icecream <- read.csv(here("data", "height_icecream.csv"))
+height_icecream
+```
+
+```{r}
+read.csv("../data/height_icecream.csv")
+```
+
+

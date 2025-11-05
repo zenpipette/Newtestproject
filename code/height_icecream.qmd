@@ -9,6 +9,10 @@ Using library "here"
 height_icecream.csv is in a folder called "data".
 My markdown document is in a folder called "code".
 
+This is the most flexible way. This way leverages the here package to explicitly define the path relative to the project root, which it detects automatically (e.g., based on an RStudio project file). This approach is generally more robust and flexible because it does not depend on where the script is called from or changes to the working directory during an R session, making the code easier to share and reproduce across different setups.
+
+Overall, the here() method is the most flexible and reproducible.
+
 ```{r}
 library(here)
 
@@ -19,6 +23,11 @@ here("data", "height_icecream.csv")
 height_icecream <- read.csv(here("data", "height_icecream.csv"))
 height_icecream
 ```
+
+
+Can also do this, without "here". This is less flexible!
+
+This is specifying a relative path starting from the current working directory (using ".." to go up one directory). This is flexible as long as the project's working directory is set correctly, but can break if the working directory changes or if the folder structure changes relative to the script location.
 
 ```{r}
 read.csv("../data/height_icecream.csv")

@@ -1,7 +1,7 @@
 ---
 title: "test R notebook"
 format: html
-editor: visual
+editor: source
 ---
 
 Code to share
@@ -14,3 +14,4 @@ x <- rnorm(1000,5,3)
 hist(x)
 ```
 
+some changes

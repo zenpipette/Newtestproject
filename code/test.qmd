@@ -1,0 +1,12 @@
+---
+title: "test"
+format: html
+editor: source
+---
+
+```{r}
+x <- rnorm(1000, 5, 2)
+
+hist(x)
+```
+

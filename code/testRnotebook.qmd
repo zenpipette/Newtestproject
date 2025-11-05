@@ -1,0 +1,16 @@
+---
+title: "test R notebook"
+format: html
+editor: visual
+---
+
+Code to share
+
+```{r}
+library(ggplot2)
+
+x <- rnorm(1000,5,3)
+
+hist(x)
+```
+
